@@ -1,3 +1,75 @@
-body{
-    
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header * {
+  text-align: center;
+}
+h4 {
+  margin: 5px;
+}
+.PSection {
+  border: 2px solid black;
+  background: rgb(199, 199, 199);
+  margin: 10px 5px; 
+}
+#PSection-Chicken .PSection-Header {
+  background-color: palevioletred;
+}
+#PSection-Beef .PSection-Header {
+  background-color: rgb(226, 108, 108);
+  color: white;
+}
+#PSection-Sushi .PSection-Header {
+  background-color: rgba(241, 241, 148, 0.699);
+}
+.PSection-Header {
+  border: 2px solid black;
+  border-top: 0;
+  display: block;
+  margin-left: auto;
+  padding: 3px 20px;
+  width: 120px;
+  text-align: center;
+}
+
+.PSection p {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 
+Responsiveness codes
+*/
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  main section {
+    width: calc((100% / 3) - 10px);
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main section {
+    width: calc((100% / 2) - 10px);
+  }
+  main #PSection-Sushi {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  main .PSection {
+    width: 100%;
+  }
 }
